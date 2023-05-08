@@ -1,6 +1,6 @@
 import { component$, useSignal } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { MUIButton, MUISlider, TableApp } from '~/integrations/react/mui';
+import { TableApp } from '~/integrations/react/mui';
 
 export default component$(() => {
   const show = useSignal(false);
@@ -12,7 +12,7 @@ export default component$(() => {
       <h1>Qwik/React mother of all demos</h1>
       <select
         value={variant.value}
-        onChange$={(ev) => {
+        onChange$={ev => {
           variant.value = (ev.target as any).value;
         }}
       >
@@ -21,23 +21,14 @@ export default component$(() => {
         <option selected>contained</option>
       </select>
 
-      <MUISlider
-        value={count.value}
-        onChange$={(_, value) => {
-          count.value = value as number;
-        }}
-      />
-
-      <MUIButton variant={variant.value} host:onClick$={() => alert('click')}>
-        Slider is {count.value}
-      </MUIButton>
-
       <button onClick$={() => (show.value = true)}>Show table</button>
-      {show.value && <TableApp client:visible>Slider is {count.value}</TableApp>}
+      {show.value && (
+        <TableApp client:visible>Slider is {count.value}</TableApp>
+      )}
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: 'Qwik React',
+  title: 'Qwik React'
 };
