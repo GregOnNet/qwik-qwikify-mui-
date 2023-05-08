@@ -26,8 +26,8 @@ devDependencies:
     specifier: 5.12.3
     version: 5.12.3(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-data-grid':
-    specifier: 6.3.1
-    version: 6.3.1(@mui/material@5.12.3)(@mui/system@5.12.3)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 5.17.24
+    version: 5.17.24(@mui/material@5.12.3)(@mui/system@5.12.3)(react-dom@18.2.0)(react@18.2.0)
   '@types/eslint':
     specifier: 8.37.0
     version: 8.37.0
@@ -791,9 +791,9 @@ packages:
       react-is: 18.2.0
     dev: true
 
-  /@mui/x-data-grid@6.3.1(@mui/material@5.12.3)(@mui/system@5.12.3)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-iceINknaOd7AIyd1h8GZVVQKS0R/JgcC7Cr7jjbqBtv018FEppMCweWdbQZYrHmcmkx2tsM28dvOn40iUKHVCg==}
-    engines: {node: '>=14.0.0'}
+  /@mui/x-data-grid@5.17.24(@mui/material@5.12.3)(@mui/system@5.12.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-2QjHlc3tEcPKatTIqQnzEvEj1+rJ33xZyOCbUXcsptjzN61DWWlWoIxXe8BW7Lp41TjqchSeUW6kBCdkJfoh8w==}
+    engines: {node: '>=12.0.0'}
     peerDependencies:
       '@mui/material': ^5.4.1
       '@mui/system': ^5.4.1

@@ -6,13 +6,12 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import type { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { DataGrid } from '@mui/x-data-grid';
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark'
+  }
+});
 export const TableApp = qwikify$(() => {
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark'
-    }
-  });
-
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
     {
@@ -60,7 +59,10 @@ export const TableApp = qwikify$(() => {
         rows={rows}
         columns={columns}
         autoPageSize={true}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
         checkboxSelection
+        disableSelectionOnClick
       />
     </ThemeProvider>
   );
