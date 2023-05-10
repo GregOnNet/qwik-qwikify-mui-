@@ -1,14 +1,14 @@
 import { component$ } from '@builder.io/qwik';
-// import styles from './gauge.module.css';
+import styles from './gauge.module.css';
 
 export default component$(({ value = 50 }: { value?: number }) => {
   const safeValue = value < 0 || value > 100 ? 50 : value;
 
   return (
-    // <div class={styles.wrapper}>
-    <div>
-      {/* <svg viewBox="0 0 120 120" class={styles.gauge}> */}
-      <svg viewBox="0 0 120 120">
+    <div class={styles.wrapper}>
+      {/* <div> */}
+      <svg viewBox="0 0 120 120" class={styles.gauge}>
+        {/* <svg viewBox="0 0 120 120"> */}
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#18B6F6" />
@@ -34,8 +34,8 @@ export default component$(({ value = 50 }: { value?: number }) => {
           }, 351.858; fill:none; transform-origin:50% 50%; stroke-linecap:round; stroke:url(#gradient)`}
         ></circle>
       </svg>
-      {/* <span class={styles.value}>{safeValue}</span> */}
-      <span>{safeValue}</span>
+      <span class={styles.value}>{safeValue}</span>
+      {/* <span>{safeValue}</span> */}
     </div>
   );
 });
