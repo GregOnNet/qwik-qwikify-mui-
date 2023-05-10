@@ -7,13 +7,13 @@ test('Increases count when "+" is clicked', async () => {
 
     await render(<Counter/>);
 
-    const count =  screen.querySelector('[data-test="count"]');
+    const countDisplay =  screen.querySelector('[data-test="count-display"]');
     
-    expect(count?.innerHTML).toBe('70')
-    
-    const increaseButton = screen.querySelector('[data-test="btn-increase"]');
+    expect(countDisplay?.innerHTML).contains('70');
+
+    const increaseButton = screen.querySelector('[data-test="increase-button"]');
     
     await userEvent(increaseButton, 'click');
-
-    expect(count?.innerHTML).toBe('71')
+    
+    expect(countDisplay?.innerHTML).contains('71')
 });
